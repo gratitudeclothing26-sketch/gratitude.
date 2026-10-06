@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GRATITUDE — Don't Take Anything for Granted</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 6%;
+
+    background: rgba(8,8,8,0.85);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+}
+
+.navlinks a:hover {
+    opacity: 0.5;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 6% 80px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1d1d1d 0,
+            #080808 55%
+        );
+}
+
+.hero h1 {
+    font-size: clamp(58px, 13vw, 170px);
+    line-height: 0.85;
+    letter-spacing: -7px;
+    font-weight: 900;
+}
+
+.hero p {
+    margin: 35px auto 0;
+
+    max-width: 650px;
+
+    font-size: 14px;
+    letter-spacing: 5px;
+
+    color: #aaa;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    border: 1px solid white;
+
+    padding: 16px 30px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTIONS */
+section {
+    padding: 110px 6%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 45px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #242424;
+    padding: 14px;
+}
+
+.product-img {
+    height: 330px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #202020,
+            #090909
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img:after {
+    content: "GRATITUDE";
+
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    color: #eee;
+
+    transform: rotate(-8deg);
+}
+
+.card-info {
+    padding: 18px 3px 8px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+.price {
+    color: #999;
+}
+
+/* ABOUT */
+.about {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: clamp(38px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 680px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    padding: 45px 6%;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+/* PHONE */
+@media (max-width: 700px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .navlinks {
+        gap: 12px;
+        font-size: 9px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-img {
+        height: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a class="logo" href="#">
+GRATITUDE
+</a>
+
+<div class="navlinks">
+
+<a href="#shop">
+SHOP
+</a>
+
+<a href="#about">
+ABOUT
+</a>
+
+<a href="#contact">
+CONTACT
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div>
+
+<h1>
+GRATITUDE
+</h1>
+
+<p>
+DON'T TAKE ANYTHING FOR GRANTED.
+</p>
+
+<a class="btn" href="#shop">
+SHOP THE DROP
+</a>
+
+</div>
+
+</header>
+
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="section-title">
+01 / THE COLLECTION
+</div>
+
+<div class="products">
+
+
+<!-- HOODIE -->
+
+<article class="card">
+
+<div class="product-img">
+</div>
+
+<div class="card-info">
+
+<span>
+GRATITUDE HOODIE
+</span>
+
+<span class="price">
+$—
+</span>
+
+</div>
+
+</article>
+
+
+<!-- T-SHIRT -->
+
+<article class="card">
+
+<div class="product-img">
+</div>
+
+<div class="card-info">
+
+<span>
+GRATITUDE TEE
+</span>
+
+<span class="price">
+$—
+</span>
+
+</div>
+
+</article>
+
+
+<!-- PANTS -->
+
+<article class="card">
+
+<div class="product-img">
+</div>
+
+<div class="card-info">
+
+<span>
+GRATITUDE PANTS
+</span>
+
+<span class="price">
+$—
+</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+02 / THE MESSAGE
+</div>
+
+<h2>
+
+DON'T TAKE<br>
+ANYTHING<br>
+FOR GRANTED.
+
+</h2>
+
+<p>
+
+GRATITUDE is more than a name.
+It's a reminder to appreciate what you have,
+keep moving forward, and never overlook
+the moments that matter.
+
+</p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" style="text-align:center">
+
+<div class="section-title">
+03 / STAY CONNECTED
+</div>
+
+<h2 style="
+font-size:clamp(32px,5vw,65px);
+letter-spacing:-2px;
+">
+
+BE PART OF THE MOVEMENT.
+
+</h2>
+
+<a
+class="btn"
+href="https://instagram.com/"
+target="_blank"
+>
+
+INSTAGRAM
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<span>
+© 2026 GRATITUDE
+</span>
+
+<span>
+DON'T TAKE ANYTHING FOR GRANTED.
+</span>
+
+</footer>
+
+</body>
+</html>D
